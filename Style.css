@@ -45,17 +45,27 @@ p {
     color: #f14057; /* Apple blue hover effect */
 }
 @media (max-width: 600px) {
+    body {
+        font-size: 15px;
+    }
     img { 
         max-width: 300px; /* smaller logo on smartphones */ 
     }
     .social-links { 
-        gap: 15px; /* reduce spacing on small screens */ 
+        flex-direction: row; /* keep horizontal */ 
+        flex-wrap: wrap; /* allow wrapping to next line if needed */ 
+        justify-content: center; 
+        gap: 15px; 
+    }
+    .social-links a {
+        font-size: 19px; /* smaller text for mobile */
     }
     p { 
         text-align: center; /* center paragraphs on mobile */ 
-        margin: 30px; /* adjust margins for smaller screens */ }
+        margin: 30px; /* adjust margins for smaller screens */ 
+    }
     .big-letter {
-       font-size: 3px; 
+        font-size: 80px !important;
     }
 
 }
@@ -67,7 +77,3 @@ p {
     margin-bottom:0.5rem;
     color: #f40021a2;
   }
-  
-  
-  
-  
